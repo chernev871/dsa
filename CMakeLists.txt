@@ -11,7 +11,6 @@ set (CMAKE_CXX_STANDARD_REQUIRED ON)
 set (ENABLE_TESTING ON CACHE BOOL "Enable unit tests")
 
 # Add self includes
-include_directories ("ext")
 include_directories ("include")
 
 # Add unit tests
