@@ -49,19 +49,16 @@ class SingleLinkedList {
 
   void PopBack() {
     if (head_ != nullptr) {
-      Node **before_last = &head_;
-      Node **last = &head_;
-      Node **after_last = &head_;
-      while (*after_last != nullptr) {
-        before_last = last;
-        last = &(*before_last)->next;
-        after_last = *last == nullptr ? last : &(*last)->next;
-      }
-      if (*before_last == head_) {
-        PopFront();
-      } else {
-        delete *last;
-        *last = *after_last;
+      if (head_->next == nullptr) { PopFront(); }
+      else {
+        Node *before_last = head_;
+        Node *last = head_->next;
+        while (last->next != nullptr) {
+          before_last = last;
+          last = last->next;
+        }
+        delete last;
+        before_last->next = nullptr;
       }
     }
   }

@@ -84,10 +84,10 @@ TEST_CASE("PopBack", "SingleLinkedList") {
 TEST_CASE("PopFront", "SingleLinkedList") {
   cs42::SingleLinkedList list;
   for (int i = 0; i < 10; ++i) { list.PushBack(cs42::Item{i}); }
-  printf("before PopBack SingleLinkedList:\n");
+  printf("before PopFront SingleLinkedList:\n");
   list.Print();
 
-  printf("after PopBack SingleLinkedList:\n");
+  printf("after PopFront SingleLinkedList:\n");
   list.PopFront();
   list.Print();
 
