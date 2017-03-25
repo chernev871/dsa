@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/clocksmith42/dsa.svg?branch=develop)](https://travis-ci.org/clocksmith42/dsa)
+[![Build Status](https://travis-ci.org/clocksmith42/dsa.svg?branch=master)](https://travis-ci.org/clocksmith42/dsa)
 
 Алгоритмы и Структуры данных
 
