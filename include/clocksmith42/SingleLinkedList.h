@@ -20,14 +20,9 @@ class SingleLinkedList {
 
   ~SingleLinkedList() { Clear(); }
 
-  void Clear() {
-    Node *next = nullptr;
-    while (head_ != nullptr) {
-      next = head_->next;
-      delete head_;
-      head_ = next;
-    }
-  }
+  const Node *Front() const { return head_; }
+
+  Node *Front() { return head_; }
 
   void PushBack(const Item &item) {
     Node *new_node = new Node{nullptr, item};
@@ -95,6 +90,16 @@ class SingleLinkedList {
 
  private:
   Node *head_;
+
+ private:
+  void Clear() {
+    Node *next = nullptr;
+    while (head_ != nullptr) {
+      next = head_->next;
+      delete head_;
+      head_ = next;
+    }
+  }
 };
 
 } // namespace clocksmith42
