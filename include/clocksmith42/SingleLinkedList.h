@@ -84,7 +84,12 @@ class SingleLinkedList {
     }
     printf("\n\n");
   }
-
+  
+  void merge() {
+	  // TODO merge linked list	 
+	  
+  }
+  
  private:
   Node *head_;
 
